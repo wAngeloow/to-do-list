@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lista de Tarefas">
+    <meta name="author" content="Angelo">
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Lista de Tarefas"/>
+    <meta property="og:image" content="https://prnt.sc/psrz5yu11YuM"/>
+    <meta property="og:description" content="Nossa lista de tarefas permite que você organize suas atividades diárias de forma prática e eficiente. Adicione, edite e conclua suas tarefas facilmente. Mantenha-se focado e produtivo o dia todo!"/>
+    <meta property="og:site_name" content="Lista de Tarefas - Organize seu dia"/>
+
+    <link rel="icon" href="img/list-check-solid.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Lista de Tarefas</title>
+    
+</head>
+<body>
+    <!--Horário-->
+    <header>
+        <div>
+            <time id="hora">00:00</time>
+        </div>
+    </header>
+
+    <!--Botão de adicionar tarefas-->
+    <form>
+        <nav class="nova-tarefa">
+            <input type="text" name="nova-tarefa" id="nova-tarefa" placeholder="Adicione uma nova tarefa">
+            <button id="add-tarefa">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </nav>
+    </form>
+
+    <!--Informaçõs-->
+    <aside class="info">
+        <div>
+            <p>Tarefas criadas</p>
+            <p id="contador-1">0</p>
+        </div>
+        <div>
+            <p>Concluídas</p>
+            <p id="contador-2">0</p>
+        </div>
+    </aside>
+
+    <!--Tarefas adicionadas-->
+    <main class="tarefas">
+        <div class="sem-tarefas">
+            <i class="fa-regular fa-clipboard"></i>
+            <p id="msg1">Você ainda não tem tarefas cadastradas</p>
+            <p id="msg2">Crie tarefas e organize sua vida</p>
+        </div>
+        
+        <ul id="lista-tarefas">
+            <!-- As tarefas serão adicionadas aqui -->
+        </ul>
+        <button id="excluir-tudo">Excluir tudo</button>
+    </main>
+
+    <!-- Modal de edição -->
+    <div id="modal-editar">
+        <h3>Editar tarefa</h3>
+        <input type="text" id="input-editar" placeholder="Alterar tarefa">
+        <div class="botao-container">
+            <button id="salvar-edicao">Salvar</button>
+            <button id="cancelar-edicao">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

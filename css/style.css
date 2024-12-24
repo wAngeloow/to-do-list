@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Horário*/
+header{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bebas Neue", serif;
+}
+
+header div time{
+    font-size: 96px;
+    font-weight: 400;
+}
+
+/*Adicionar tarefa*/
+.nova-tarefa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#nova-tarefa{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px rgba(0, 0, 0, 0.33) solid;
+    padding-left: 10px;
+}
+
+#add-tarefa{
+    width: 50px;
+    height: 50px;
+    background-color: #FF6200;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+#add-tarefa i{
+    font-size: 25px;
+    color: white;
+}
+
+/*Informações*/
+.info{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info div{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.info p{
+    color: #6B6572;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#contador-1{
+    color: #FF6200;
+    background-color: #ff620079;
+    padding: 4px 8px 4px 8px;
+    border-radius: 50%;
+}
+#contador-2{
+    color: #2D6C4A;
+    background-color: #2d6c4b85;
+    padding: 4px 8px 4px 8px;
+    border-radius: 50%;
+}
+
+/*Tarefas*/
+.tarefas{
+    border-top: 1px rgba(0, 0, 0, 0.20) solid;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 10px 100px 0 100px;
+}
+
+/*Sem tarefas*/
+.sem-tarefas{
+    text-align: center;
+}
+
+.sem-tarefas i{
+    color: #FF6200;
+    font-size: 48px;
+    margin-bottom: 10px;
+} 
+
+.sem-tarefas #msg1 {
+    color: var(--Base-gray-500, #6B6572);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.sem-tarefas #msg2 {
+    color: var(--Base-gray-500, #6B6572);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/*Lista de tarefas*/
+.tarefas ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tarefas ul li{
+    display: flex;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px #000000 solid;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.tarefas button{
+    border: none;
+    background-color: transparent;
+}
+
+/* Estilo para check */
+.checkbox i{
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Estilo para o texto */
+.text {
+    flex: 1 1 0;
+    color: black;
+    text-align: justify;
+    width: 500px;
+}
+
+/* Estilo para editar */
+.edit i{
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Estilo para lixera */
+.delete i{
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.delete i:hover{
+    color: red;
+}
+
+/* Excluir tudo*/
+#excluir-tudo{
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #FF0000;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Novo fundo para o modal */
+#modal-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: none;
+    z-index: 998;
+}
+
+/* Estilo do modal */
+#modal-editar {
+    display: none;
+    position: fixed;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    z-index: 999;
+}
+
+#modal-editar h3{
+    text-align: center;
+}
+#modal-editar input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: black solid 1px;
+    border-radius: 5px;
+}
+
+#modal-editar .botao-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+#modal-editar button {
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#salvar-edicao{
+    background-color: #2D6C4A;
+}
+
+#salvar-edicao:hover{
+    background-color: #368058;
+}
+
+#cancelar-edicao{
+    background-color: rgb(230, 4, 4);
+}
+
+#cancelar-edicao:hover{
+    background-color: red;
+}
+
+/*Mobile*/
+@media (max-width: 768px) {
+    #nova-tarefa {
+        width: 100%;
+        max-width: 300px;
+        height: 40px;
+    }
+
+    .tarefas {
+        padding: 20px;
+        margin: 10px 20px;
+    }
+
+    .tarefas ul li {
+        padding: 10px;
+        gap: 8px;
+        max-width: 350px;
+    }
+
+    #modal-editar {
+        width: 90%;
+        max-width: 300px;
+    }
+
+}
