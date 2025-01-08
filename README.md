@@ -10,6 +10,7 @@
 - Marcar tarefas como concluídas.
 - Contador mostrando o número total de tarefas criadas e concluídas.
 - Armazena as informações localmente no navegador (local storage) garantindo que o progresso seja preservado mesmo se a aba do navegador for fechada.
+- Mostra o horário atual no topo da tela.
 
 ## Tecnologias
 - HTML  
